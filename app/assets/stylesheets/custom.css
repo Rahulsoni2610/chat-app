@@ -1,0 +1,97 @@
+.chat-room {
+  height: 93vh;
+  overflow-y: scroll;
+  .chat-box {
+    position: absolute;
+    bottom: 0px;
+    width: 94%;
+  }
+  .message {
+    min-height: 59px;
+    .content-container {
+      max-width: 40%;
+      word-wrap: break-word;
+      display: inline-block;
+      width: auto !important;
+      .content {
+        padding: 6px 14px;
+        font-size: 16px;
+        border-radius: 23px;;
+      }
+      .user-details {
+          font-size: 11px;
+          color: #7a7575;
+        }
+    }
+    &.my-msg {
+      .content-container {
+        float: right;
+        .content {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.card-dark {
+  background-color: #03172c80;
+  border-radius: 0.75rem !important;
+}
+
+.message-input {
+  background-color: floralwhite;
+}
+
+.side-bar-color {
+  background: linear-gradient(178.6deg, rgb(20, 36, 50) 11.8%, rgb(124, 143, 161) 83.8%);
+}
+
+.bg-dark {
+  background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+}
+
+.bg-light {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+/*Dark button css*/
+.btn-hover {
+    width: 96px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 8px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    color: #fff;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+.btn-hover.color-8 {
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+.btn-hover.color-9 {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}

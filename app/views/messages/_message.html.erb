@@ -1,0 +1,11 @@
+<div class="message mt-4 mb-1 <%= 'my-msg' if message.user == current_user %>">
+  <div class="content-container <%= message.user == current_user ? 'btn-hover color-9' : 'btn-hover color-8' %>">
+    <div class="content">
+      <%= message.content%>
+    </div>
+    <div class="user-details mt-1 mx-sm-3">
+      <p class="text-uppercase"><%= message.created_at.strftime('%d,%h')%></p>
+    </div>
+  </div>
+</div>
+<br>
