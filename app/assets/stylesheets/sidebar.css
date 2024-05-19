@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container aside {
+  height: 100vh;
+  background: #131C21;
+  overflow-y: auto;
+}
+.container aside button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  width: 100%;
+}
+.container aside button:active .user {
+  background-color: #0F1A20;
+}
+.container aside button:focus .user {
+  background-color: #0F1A20;
+}
+.container aside .user {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.container aside .user:hover {
+  background-color: #0F1A20;
+  transition: 0.2s ease-in-out;
+}
+.container aside .user .avatar img {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  margin-right: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container aside .user .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: -15px;
+  align-items: baseline;
+}
+.container aside .user .details .green {
+  color: #25D366;
+  font-size: 0.9rem;
+}
+.container aside .user .details .name h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.container aside .user .details .message h6 {
+  font-size: 0.8rem;
+  font-weight: 300;
+}/*# sourceMappingURL=main.css.map */

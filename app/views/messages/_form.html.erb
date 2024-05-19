@@ -1,4 +1,4 @@
-<%= form_with(model: message, id:'msg-form') do |form| %>
+<%= form_with(model: message, id:'msg-form', class:"msger-inputarea") do |form| %>
   <% if message.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>
@@ -12,10 +12,8 @@
   <% end %>
   <%= form.hidden_field :room_id, value: room.id %>
 
-  <div class="input-group">
-    <%= form.text_field :content, placeholder:'type here for message...', class:'form-control p-4', id:"message-input" %>
-    <div class="input-group-append">
-      <%= form.submit 'Send', class:'btn-hover color-9' %>
-    </div>
+  <div class="w-100 d-flex">
+    <%= form.text_field :content, placeholder:'Enter your message...', class:"msger-input", id:"message-input", required: true %>
+    <%= form.submit 'Send', class:"msger-send-btn" %>
   </div>
 <% end %>
