@@ -1,11 +1,30 @@
-<div class="message mt-4 mb-1 <%= 'my-msg' if message.user == current_user %>">
-  <div class="content-container <%= message.user == current_user ? 'btn-hover color-9' : 'btn-hover color-8' %>">
-    <div class="content">
-      <%= message.content%>
+<div class="msg <%= message.user == current_user ? 'right-msg' : 'left-msg' %>">
+  <div
+   class="msg-img"
+   style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"
+  ></div>
+
+  <div class="msg-bubble">
+    <div class="msg-info">
+      <div class="msg-info-name">
+      <%= message.user.username%>
+      </div>
+      <div class="msg-info-time">
+        <%= message.created_at.strftime('%d,%h')%>
+      </div>
     </div>
-    <div class="user-details mt-1 mx-sm-3">
-      <p class="text-uppercase"><%= message.created_at.strftime('%d,%h')%></p>
+
+    <div class="msg-text">
+      <%= message.content%>
     </div>
   </div>
 </div>
-<br>
+
+
+
+
+
+
+
+
+
