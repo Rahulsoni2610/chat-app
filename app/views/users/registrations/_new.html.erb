@@ -1,0 +1,21 @@
+<div class="wrapper" id="registerFormContent">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <h1>Register</h1>
+    <div class="input-box">
+      <%= f.email_field :email, placeholder:"Email", reeuired: true%>
+    </div>
+    <div class="input-box">
+      <%= f.password_field :password, placeholder:"Password"%>
+    </div>
+    <div class="input-box">
+      <%= f.password_field :password_confirmation, placeholder:"Confirm Password"%>
+    </div>
+    <div class="checkbox1">
+      <label><input type="checkbox" required>I agree to terms & conditions</label>
+    </div>
+    <%= f.submit "Sign up", class:'btn' %>
+    <div class="link">
+      <p>Already have an account? <label for="loginForm">Login</label></p>
+    </div>
+  <%end%>
+</div>

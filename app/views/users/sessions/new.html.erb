@@ -1,0 +1,39 @@
+<div class="login-body">
+
+<input type="radio" id="loginForm" name="formToggle" checked>
+  <input type="radio" id="registerForm" name="formToggle">
+  <input type="radio" id="forgotForm" name="formToggle">
+  <div class="wrapper" id="loginFormContent">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <h1>Login</h1>
+      <div class="input-box">
+        <%= f.email_field :email, placeholder:"Username" %>
+      </div>
+      <div class="input-box">
+        <%= f.password_field :password, autocomplete: "current-password", placeholder:"Password" %>
+      </div>
+      <div class="checkbox1">
+        <label><input type="checkbox">Remember Me</label>
+        <label for="forgotForm">Forgot Password</label>
+      </div>
+        <%= f.submit "Log in", class:"btn" %>
+      <div class="link">
+        <p>Don't have an account? <label for="registerForm">Register</label></p>
+      </div>
+    <%end%>
+  </div>
+  <%= render 'users/registrations/new' %>
+  <div class="wrapper" id="forgotFormContent">
+    <form action="">
+      <h1>Reset your password</h1>
+      <div class="input-box">
+        <input type="email" placeholder="Email" required>
+      </div>
+      <div class="input-box">
+        <button type="submit" class="btn">Send Request</button>
+        <div class="link">
+          <p>Don't have an account? <label for="registerForm">Register</label></p>
+        </div>
+      </form>
+    </div>
+</div>
